@@ -1,6 +1,9 @@
 package com.softuni.gamestore.domain.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Set;
@@ -22,6 +25,7 @@ public class Game extends BaseEntity {
     }
 
     @Column(name = "title", nullable = false, unique = true)
+    @Pattern(regexp = "^[A-Z][a-zA-Z0-9]{2,99}",message = "Incorrect title")
     public String getTitle() {
         return title;
     }
@@ -31,6 +35,7 @@ public class Game extends BaseEntity {
     }
 
     @Column(name = "trailer", unique = true)
+    @Size(min = 11,max = 11)
     public String getTrailer() {
         return trailer;
     }
@@ -40,6 +45,7 @@ public class Game extends BaseEntity {
     }
 
     @Column(name = "image_thumbnail", unique = true)
+    @Pattern(regexp = "(http)?(https)?:\\/\\/.+",message = "Invalid url")
     public String getImageThumbnail() {
         return imageThumbnail;
     }
@@ -49,6 +55,7 @@ public class Game extends BaseEntity {
     }
 
     @Column(name = "description", length = 1000)
+    @Size(min=10,max = 1000)
     public String getDescription() {
         return description;
     }
@@ -57,16 +64,16 @@ public class Game extends BaseEntity {
         this.description = description;
     }
 
-    @Column(name = "size", nullable = false)
-    public Double getSize() {
-        return size;
-    }
+    @Column(name = "size", nullable = false,precision = 19,scale = 2)
+    @Min(value = 0)
+    public Double getSize() {  return size;   }
 
     public void setSize(Double size) {
         this.size = size;
     }
 
-    @Column(name = "price", nullable = false)
+    @Column(name = "price", nullable = false, precision = 19,scale = 2)
+    @Min(value = 0)
     public BigDecimal getPrice() {
         return price;
     }
