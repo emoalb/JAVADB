@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Scanner;
 
 @Controller
@@ -46,13 +47,22 @@ public class GameStoreController implements CommandLineRunner {
                     System.out.println(this.userService.logoutUser());
                     break;
                 case "AddGame":
-                    GameAddDto gameAddDto = new GameAddDto(params[1], params[4], params[5], params[7], Double.parseDouble(params[3]),
+                    GameAddDto gameAddDto = new GameAddDto(params[1], params[4], params[5], params[6], Double.parseDouble(params[3]),
                             new BigDecimal(params[2]), LocalDate.parse(params[7], DateTimeFormatter.ofPattern("dd-MM-yyyy")));
                   System.out.println(this.gameService.addGame(gameAddDto));
                     break;
                 case "EditGame":
+                    String[] editData  = Arrays.copyOfRange(params,2,params.length);
+                    System.out.println(this.gameService.editGame(Integer.parseInt(params[1]),editData));
                     break;
                 case "DeleteGame":
+                    System.out.println(this.gameService.deleteGame(Integer.parseInt(params[1])));
+                    break;
+                case "AllGames":
+                    System.out.println(this.gameService.findAllGames());
+                    break;
+                case"DetailGame":
+                    System.out.println(this.gameService.printGameDetails(params[1]));
                     break;
 
             }

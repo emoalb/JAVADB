@@ -24,6 +24,7 @@ public class Game extends BaseEntity {
     public Game() {
     }
 
+
     @Column(name = "title", nullable = false, unique = true)
     @Pattern(regexp = "^[A-Z][a-zA-Z0-9]{2,99}",message = "Incorrect title")
     public String getTitle() {
