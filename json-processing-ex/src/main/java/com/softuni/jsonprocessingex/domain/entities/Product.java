@@ -34,7 +34,7 @@ public class Product extends BaseEntity {
         this.price = price;
     }
 
-    @OneToOne(targetEntity = User.class)
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "seller_id", referencedColumnName = "id")
     public User getSeller() {
         return seller;
@@ -44,7 +44,7 @@ public class Product extends BaseEntity {
         this.seller = seller;
     }
 
-    @OneToOne(targetEntity = User.class)
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "buyer_id", referencedColumnName = "id")
     public User getBuyer() {
         return buyer;

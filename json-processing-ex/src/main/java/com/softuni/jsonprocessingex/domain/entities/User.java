@@ -11,8 +11,8 @@ public class User extends BaseEntity {
     private String firstName;
     private String lastName;
     private Integer age;
-    private Product buyingProduct;
-    private Product sellingProduct;
+    private Set<Product> buyingProduct;
+    private Set<Product> sellingProduct;
     private Set<User> friends;
 
     public User() {
@@ -45,22 +45,22 @@ public class User extends BaseEntity {
         this.age = age;
     }
 
-    @OneToOne(targetEntity = Product.class, mappedBy = "buyer")
-    public Product getBuyingProduct() {
+    @OneToMany(targetEntity = Product.class, mappedBy = "buyer",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    public Set<Product> getBuyingProduct() {
         return buyingProduct;
     }
 
-    public void setBuyingProduct(Product buyingProduct) {
+    public void setBuyingProduct(Set<Product> buyingProduct) {
         this.buyingProduct = buyingProduct;
     }
 
-    @OneToOne(targetEntity = Product.class, mappedBy = "seller")
-    public Product getSellingProduct() {
+    @OneToMany(targetEntity = Product.class, mappedBy = "seller",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    public Set<Product> getSellingProduct() {
         return sellingProduct;
     }
 
 
-    public void setSellingProduct(Product sellingProduct) {
+    public void setSellingProduct(Set<Product> sellingProduct) {
         this.sellingProduct = sellingProduct;
     }
 

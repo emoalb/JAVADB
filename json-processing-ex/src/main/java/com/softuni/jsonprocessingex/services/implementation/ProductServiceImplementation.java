@@ -1,6 +1,7 @@
 package com.softuni.jsonprocessingex.services.implementation;
 
 import com.softuni.jsonprocessingex.domain.dtos.ProductSeedDto;
+import com.softuni.jsonprocessingex.domain.dtos.ProductsInRangeDto;
 import com.softuni.jsonprocessingex.domain.entities.Category;
 import com.softuni.jsonprocessingex.domain.entities.Product;
 import com.softuni.jsonprocessingex.domain.entities.User;
@@ -9,11 +10,13 @@ import com.softuni.jsonprocessingex.repositories.ProductRepository;
 import com.softuni.jsonprocessingex.repositories.UserRepository;
 import com.softuni.jsonprocessingex.services.ProductService;
 import com.softuni.jsonprocessingex.util.ValidatorUtil;
+import net.bytebuddy.implementation.bytecode.Throw;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.math.BigDecimal;
 import java.util.*;
 
 @Service
@@ -43,6 +46,7 @@ public class ProductServiceImplementation implements ProductService {
             if (user.getId() % 3 == 0) {
                 productSeedDto.setBuyer(null);
             } else {
+                user = getRandomUser();
                 productSeedDto.setBuyer(user);
             }
             if (!validatorUtil.isValid(productSeedDto)) {
@@ -55,6 +59,27 @@ public class ProductServiceImplementation implements ProductService {
         }
     }
 
+    @Override
+    public List<ProductsInRangeDto> getProductsFromRange(BigDecimal startingPrice, BigDecimal endPrice) {
+        if(startingPrice.compareTo(endPrice) > 0){
+            throw new IllegalArgumentException("Starting price has bigger value than ending price");
+        }
+        List<Product> productsFromRange = this.productRepository.findAllByPriceBetweenAndBuyerIsNullOrderByPriceAsc(startingPrice, endPrice);
+        List<ProductsInRangeDto> exportProducts = new ArrayList<>();
+        productsFromRange.forEach(p -> {
+            String fullName;
+            if (p.getSeller().getFirstName() == null) {
+                fullName = p.getSeller().getLastName();
+            } else {
+                fullName = p.getSeller().getFirstName() + " " + p.getSeller().getLastName();
+            }
+
+            ProductsInRangeDto productsInRangeDto = new ProductsInRangeDto(p.getName(), p.getPrice(), fullName);
+            exportProducts.add(productsInRangeDto);
+        });
+        return exportProducts;
+    }
+
     private User getRandomUser() {
         Set<User> allUsers = new HashSet<>(this.userRepository.findAll());
         Random random = new Random();
@@ -64,8 +89,8 @@ public class ProductServiceImplementation implements ProductService {
 
     private Category getRandomCategory() {
         Random random = new Random();
-        int index = random.nextInt( (int)this.categoryRepository.count()-1)+1;
-        return  this.categoryRepository.findById(index).orElse(null);
+        int index = random.nextInt((int) this.categoryRepository.count() - 1) + 1;
+        return this.categoryRepository.findById(index).orElse(null);
     }
 
     private Set<Category> getRandomCategories() {

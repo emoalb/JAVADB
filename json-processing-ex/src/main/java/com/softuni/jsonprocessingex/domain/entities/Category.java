@@ -19,7 +19,7 @@ public class Category extends  BaseEntity {
     public void setName(String name) {
         this.name = name;
     }
-    @ManyToMany(targetEntity = Product.class, mappedBy = "categories"
+    @ManyToMany(targetEntity = Product.class, mappedBy = "categories",fetch = FetchType.EAGER,cascade = CascadeType.ALL
     )
     public Set<Product> getProducts() {
         return products;
