@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.io.IOException;
+import java.util.List;
 
 @Service
 public class TownServiceImpl implements TownService {
@@ -35,7 +36,6 @@ public class TownServiceImpl implements TownService {
 
     @Override
     public Boolean townsAreImported() {
-        //TODO: Implement me
         return this.townRepository.count() > 0;
     }
 
@@ -75,7 +75,13 @@ public class TownServiceImpl implements TownService {
 
     @Override
     public String exportRacingTowns() {
-        //TODO: Implement me
-        return null;
+        StringBuilder sb = new StringBuilder();
+        List<Town> racingTowns = this.townRepository.sortedTowns();
+        racingTowns.forEach(town -> {
+            sb.append("Name: ").append(town.getName()).append(System.lineSeparator());
+            sb.append("Racers: ").append(town.getRacers().size()).append(System.lineSeparator());
+        });
+
+         return sb.toString();
     }
 }
