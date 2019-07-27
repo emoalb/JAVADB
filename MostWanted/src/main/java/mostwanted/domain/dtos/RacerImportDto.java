@@ -5,9 +5,10 @@ import com.google.gson.annotations.Expose;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class RacerImportDto {
+public class RacerImportDto implements Serializable {
     @Expose
     private String name;
     @Expose

@@ -4,11 +4,11 @@ import com.google.gson.annotations.Expose;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 
-public class CarImportDto {
+public class CarImportDto  implements Serializable {
     @Expose
     private String brand;
     @Expose

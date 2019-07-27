@@ -4,8 +4,9 @@ package mostwanted.domain.dtos;
 import com.google.gson.annotations.Expose;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
-public class TownImportDto {
+public class TownImportDto implements Serializable {
     @Expose
     private String name;
 
