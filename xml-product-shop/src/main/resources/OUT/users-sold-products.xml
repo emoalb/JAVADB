@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user first-name="Eugene" last-name="Stewart">
+        <sold-product>
+            <product>
+                <name>leader pain reliever</name>
+                <price>1179.79</price>
+                <buyer-first-name>Christine</buyer-first-name>
+                <buyer-last-name>Gomez</buyer-last-name>
+            </product>
+            <product>
+                <name>Glipizide and Metformin Hydrochloride</name>
+                <price>953.60</price>
+                <buyer-first-name>Thomas</buyer-first-name>
+                <buyer-last-name>Snyder</buyer-last-name>
+            </product>
+            <product>
+                <name>Ringers</name>
+                <price>1054.37</price>
+                <buyer-first-name>Betty</buyer-first-name>
+                <buyer-last-name>Ward</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Fred" last-name="Allen">
+        <sold-product>
+            <product>
+                <name>Oxygen</name>
+                <price>1242.92</price>
+                <buyer-first-name>Anna</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>Wintergreen Isopropyl Alcohol</name>
+                <price>1397.57</price>
+                <buyer-first-name>Betty</buyer-first-name>
+                <buyer-last-name>Ward</buyer-last-name>
+            </product>
+            <product>
+                <name>Cefadroxil</name>
+                <price>1302.20</price>
+                <buyer-first-name>Rachel</buyer-first-name>
+                <buyer-last-name>Johnson</buyer-last-name>
+            </product>
+            <product>
+                <name>Parsley</name>
+                <price>519.06</price>
+                <buyer-first-name>Clarence</buyer-first-name>
+                <buyer-last-name>Fowler</buyer-last-name>
+            </product>
+            <product>
+                <name>Ketorolac Tromethamine</name>
+                <price>608.18</price>
+                <buyer-first-name>Diana</buyer-first-name>
+                <buyer-last-name>Harvey</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Betty" last-name="Lawson">
+        <sold-product>
+            <product>
+                <name>Gemcitabine</name>
+                <price>594.79</price>
+                <buyer-first-name>Emily</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>Warfarin Sodium</name>
+                <price>770.05</price>
+                <buyer-first-name>Rachel</buyer-first-name>
+                <buyer-last-name>Johnson</buyer-last-name>
+            </product>
+            <product>
+                <name>CEDAX</name>
+                <price>342.86</price>
+                <buyer-first-name>Patricia</buyer-first-name>
+                <buyer-last-name>Cooper</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Anna" last-name="Clark">
+        <sold-product>
+            <product>
+                <name>Hydralazine Hydrochloride</name>
+                <price>1309.72</price>
+                <buyer-first-name>Diana</buyer-first-name>
+                <buyer-last-name>Harvey</buyer-last-name>
+            </product>
+            <product>
+                <name>GOONG SECRET CALMING BATH</name>
+                <price>742.47</price>
+                <buyer-first-name>Benjamin</buyer-first-name>
+                <buyer-last-name>Henry</buyer-last-name>
+            </product>
+            <product>
+                <name>ENBREL</name>
+                <price>673.97</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Harris</buyer-last-name>
+            </product>
+            <product>
+                <name>PANTOPRAZOLE SODIUM</name>
+                <price>293.89</price>
+                <buyer-first-name>Betty</buyer-first-name>
+                <buyer-last-name>Lawson</buyer-last-name>
+            </product>
+            <product>
+                <name>kirkland signature minoxidil</name>
+                <price>49.17</price>
+                <buyer-first-name>Kathy</buyer-first-name>
+                <buyer-last-name>Gilbert</buyer-last-name>
+            </product>
+            <product>
+                <name>Alternaria alternata</name>
+                <price>61.24</price>
+                <buyer-first-name>Fred</buyer-first-name>
+                <buyer-last-name>Allen</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user last-name="Lawson">
+        <sold-product>
+            <product>
+                <name>Triamterene and Hydrochlorothiazide</name>
+                <price>1416.59</price>
+                <buyer-first-name>Emily</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>NEO-POLY-BAC HYDRO</name>
+                <price>967.32</price>
+                <buyer-first-name>Arthur</buyer-first-name>
+                <buyer-last-name>Reynolds</buyer-last-name>
+            </product>
+            <product>
+                <name>Nevirapine</name>
+                <price>1374.72</price>
+                <buyer-first-name>Gloria</buyer-first-name>
+                <buyer-last-name>Alexander</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user last-name="Fox">
+        <sold-product>
+            <product>
+                <name>Ranitidine</name>
+                <price>926.64</price>
+                <buyer-first-name>Anna</buyer-first-name>
+                <buyer-last-name>Clark</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Brenda" last-name="Howell">
+        <sold-product>
+            <product>
+                <name>Alcohol Free Antiseptic</name>
+                <price>1486.07</price>
+                <buyer-first-name>Doris</buyer-first-name>
+                <buyer-last-name>Cook</buyer-last-name>
+            </product>
+            <product>
+                <name>PCA SKIN ACNE</name>
+                <price>1356.22</price>
+                <buyer-first-name>Wanda</buyer-first-name>
+                <buyer-last-name>Harris</buyer-last-name>
+            </product>
+            <product>
+                <name>Gehwol med Lipidro</name>
+                <price>421.24</price>
+                <buyer-first-name>Doris</buyer-first-name>
+                <buyer-last-name>Cook</buyer-last-name>
+            </product>
+            <product>
+                <name>Topiramate</name>
+                <price>578.77</price>
+                <buyer-first-name>Patricia</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+            <product>
+                <name>Zonisamide</name>
+                <price>1305.41</price>
+                <buyer-first-name>Kathy</buyer-first-name>
+                <buyer-last-name>Gilbert</buyer-last-name>
+            </product>
+            <product>
+                <name>MOIST MOISTURE SKIN TONER</name>
+                <price>152.43</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Martinez</buyer-last-name>
+            </product>
+            <product>
+                <name>Isosorbide Mononitrate</name>
+                <price>789.91</price>
+                <buyer-first-name>Rachel</buyer-first-name>
+                <buyer-last-name>Johnson</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user last-name="Schmidt">
+        <sold-product>
+            <product>
+                <name>AIR</name>
+                <price>581.69</price>
+                <buyer-first-name>Clarence</buyer-first-name>
+                <buyer-last-name>Fowler</buyer-last-name>
+            </product>
+            <product>
+                <name>PREMIER VALUE ALLERGY</name>
+                <price>1127.61</price>
+                <buyer-first-name>Brenda</buyer-first-name>
+                <buyer-last-name>Howell</buyer-last-name>
+            </product>
+            <product>
+                <name>cough and sore throat</name>
+                <price>1482.68</price>
+                <buyer-first-name>Wanda</buyer-first-name>
+                <buyer-last-name>Harris</buyer-last-name>
+            </product>
+            <product>
+                <name>Flumazenil</name>
+                <price>1151.37</price>
+                <buyer-first-name>Gloria</buyer-first-name>
+                <buyer-last-name>Alexander</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user last-name="Moreno">
+        <sold-product>
+            <product>
+                <name>Pioglitazone</name>
+                <price>306.56</price>
+                <buyer-first-name>Patricia</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+            <product>
+                <name>MEDI-FIRST Non-Aspirin</name>
+                <price>1301.28</price>
+                <buyer-first-name>Diana</buyer-first-name>
+                <buyer-last-name>Harvey</buyer-last-name>
+            </product>
+            <product>
+                <name>Perrigo Benzoyl Peroxide</name>
+                <price>873.24</price>
+                <buyer-first-name>Eugene</buyer-first-name>
+                <buyer-last-name>Stewart</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user last-name="Stewart">
+        <sold-product>
+            <product>
+                <name>Propranolol Hydrochloride</name>
+                <price>546.95</price>
+                <buyer-first-name>Emily</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>Effervescent Cold Relief</name>
+                <price>1436.07</price>
+                <buyer-first-name>Wanda</buyer-first-name>
+                <buyer-last-name>Harris</buyer-last-name>
+            </product>
+            <product>
+                <name>ENALAPRIL MALEATE</name>
+                <price>210.42</price>
+                <buyer-first-name>Bonnie</buyer-first-name>
+                <buyer-last-name>Fox</buyer-last-name>
+            </product>
+            <product>
+                <name>Protonix</name>
+                <price>466.70</price>
+                <buyer-first-name>Jacqueline</buyer-first-name>
+                <buyer-last-name>Perez</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Rachel" last-name="Johnson">
+        <sold-product>
+            <product>
+                <name>Amitriptyline Hydrochloride</name>
+                <price>1453.96</price>
+                <buyer-first-name>Thomas</buyer-first-name>
+                <buyer-last-name>Snyder</buyer-last-name>
+            </product>
+            <product>
+                <name>ERYTHROMYCIN Base Filmtab</name>
+                <price>117.84</price>
+                <buyer-first-name>Emily</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>LV-FX</name>
+                <price>820.87</price>
+                <buyer-first-name>Jeremy</buyer-first-name>
+                <buyer-last-name>Woods</buyer-last-name>
+            </product>
+            <product>
+                <name>Ibuprofen</name>
+                <price>1305.96</price>
+                <buyer-first-name>Jeremy</buyer-first-name>
+                <buyer-last-name>Woods</buyer-last-name>
+            </product>
+            <product>
+                <name>LBEL Couleur Luxe Rouge Amplifier XP amplifying SPF 15</name>
+                <price>1069.43</price>
+                <buyer-first-name>Bonnie</buyer-first-name>
+                <buyer-last-name>Fox</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user last-name="Harrison">
+        <sold-product>
+            <product>
+                <name>EPZICOM</name>
+                <price>895.65</price>
+                <buyer-first-name>Patricia</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+            <product>
+                <name>RESCRIPTOR</name>
+                <price>850.52</price>
+                <buyer-first-name>Chris</buyer-first-name>
+                <buyer-last-name>Mitchell</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Nicole" last-name="Harris">
+        <sold-product>
+            <product>
+                <name>Amitiza</name>
+                <price>666.58</price>
+                <buyer-first-name>Benjamin</buyer-first-name>
+                <buyer-last-name>Henry</buyer-last-name>
+            </product>
+            <product>
+                <name>TERSI</name>
+                <price>554.91</price>
+                <buyer-first-name>Doris</buyer-first-name>
+                <buyer-last-name>Cook</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Nicole" last-name="Martinez">
+        <sold-product>
+            <product>
+                <name>Yellow Jacket hymenoptera venom Venomil Diagnostic</name>
+                <price>23.58</price>
+                <buyer-first-name>Wanda</buyer-first-name>
+                <buyer-last-name>Harris</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Patricia" last-name="Cooper">
+        <sold-product>
+            <product>
+                <name>Fosphenytoin Sodium</name>
+                <price>1334.06</price>
+                <buyer-first-name>Brenda</buyer-first-name>
+                <buyer-last-name>Howell</buyer-last-name>
+            </product>
+            <product>
+                <name>Azithromycin</name>
+                <price>813.87</price>
+                <buyer-first-name>Jeremy</buyer-first-name>
+                <buyer-last-name>Woods</buyer-last-name>
+            </product>
+            <product>
+                <name>Pleo Ginkgo</name>
+                <price>613.65</price>
+                <buyer-first-name>Jacqueline</buyer-first-name>
+                <buyer-last-name>Perez</buyer-last-name>
+            </product>
+            <product>
+                <name>Childrens Allegra Allergy</name>
+                <price>650.97</price>
+                <buyer-first-name>Brandon</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+            <product>
+                <name>Pleo Lat</name>
+                <price>720.08</price>
+                <buyer-first-name>Betty</buyer-first-name>
+                <buyer-last-name>Lawson</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Christina" last-name="Patterson">
+        <sold-product>
+            <product>
+                <name>XtraCare Foam Antibacterial Hand Wash</name>
+                <price>1251.97</price>
+                <buyer-first-name>Joshua</buyer-first-name>
+                <buyer-last-name>Murray</buyer-last-name>
+            </product>
+            <product>
+                <name>ROPINIROLE HYDROCHLORIDE</name>
+                <price>266.44</price>
+                <buyer-first-name>Brenda</buyer-first-name>
+                <buyer-last-name>Howell</buyer-last-name>
+            </product>
+            <product>
+                <name>smart sense nicotine</name>
+                <price>1444.12</price>
+                <buyer-first-name>Billy</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>Pollens - Weeds and Garden Plants, Nettle Urtica dioica</name>
+                <price>782.77</price>
+                <buyer-first-name>Carl</buyer-first-name>
+                <buyer-last-name>Daniels</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Sarah" last-name="Day">
+        <sold-product>
+            <product>
+                <name>SNORING HP</name>
+                <price>53.59</price>
+                <buyer-first-name>Anna</buyer-first-name>
+                <buyer-last-name>Clark</buyer-last-name>
+            </product>
+            <product>
+                <name>Prostate</name>
+                <price>716.05</price>
+                <buyer-first-name>Benjamin</buyer-first-name>
+                <buyer-last-name>Henry</buyer-last-name>
+            </product>
+            <product>
+                <name>SUMATRIPTAN SUCCINATE</name>
+                <price>1265.94</price>
+                <buyer-first-name>Joshua</buyer-first-name>
+                <buyer-last-name>Murray</buyer-last-name>
+            </product>
+            <product>
+                <name>EMEND</name>
+                <price>1365.51</price>
+                <buyer-first-name>Rachel</buyer-first-name>
+                <buyer-last-name>Johnson</buyer-last-name>
+            </product>
+            <product>
+                <name>Warfarin Sodium</name>
+                <price>1379.79</price>
+                <buyer-first-name>Jeremy</buyer-first-name>
+                <buyer-last-name>Woods</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Joshua" last-name="Murray">
+        <sold-product>
+            <product>
+                <name>Treatment Set TS336667</name>
+                <price>1466.47</price>
+                <buyer-first-name>Jeremy</buyer-first-name>
+                <buyer-last-name>Woods</buyer-last-name>
+            </product>
+            <product>
+                <name>Allopurinol</name>
+                <price>336.81</price>
+                <buyer-first-name>Patricia</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+            <product>
+                <name>Dawn Ultra Antibacterial Hand</name>
+                <price>969.86</price>
+                <buyer-first-name>Sarah</buyer-first-name>
+                <buyer-last-name>Day</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Diana" last-name="Harvey">
+        <sold-product>
+            <product>
+                <name>Metformin Hydrochloride</name>
+                <price>953.99</price>
+                <buyer-first-name>Rachel</buyer-first-name>
+                <buyer-last-name>Johnson</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Paula" last-name="Hill">
+        <sold-product>
+            <product>
+                <name>Air</name>
+                <price>331.53</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Martinez</buyer-last-name>
+            </product>
+            <product>
+                <name>Dover Aminophen</name>
+                <price>192.07</price>
+                <buyer-first-name>Anna</buyer-first-name>
+                <buyer-last-name>Clark</buyer-last-name>
+            </product>
+            <product>
+                <name>Labetalol Hydrochloride</name>
+                <price>1345.11</price>
+                <buyer-first-name>Joshua</buyer-first-name>
+                <buyer-last-name>Murray</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Billy" last-name="Parker">
+        <sold-product>
+            <product>
+                <name>Metoprolol Tartrate</name>
+                <price>1405.74</price>
+                <buyer-first-name>Fred</buyer-first-name>
+                <buyer-last-name>Allen</buyer-last-name>
+            </product>
+            <product>
+                <name>Imipramine Hydrochloride</name>
+                <price>648.69</price>
+                <buyer-first-name>Brenda</buyer-first-name>
+                <buyer-last-name>Howell</buyer-last-name>
+            </product>
+            <product>
+                <name>Extra Strength Pain Reliever PM</name>
+                <price>542.72</price>
+                <buyer-first-name>Sarah</buyer-first-name>
+                <buyer-last-name>Day</buyer-last-name>
+            </product>
+            <product>
+                <name>ESIKA 3-IN-1 PRO MAKE UP FOUNDATION SPF 20 BASE DE MAQUILLAJE PARA ROSTRO 3-EN-1 PRO FPS 20</name>
+                <price>1097.60</price>
+                <buyer-first-name>Eugene</buyer-first-name>
+                <buyer-last-name>Stewart</buyer-last-name>
+            </product>
+            <product>
+                <name>Leflunomide</name>
+                <price>312.85</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Harris</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Christine" last-name="Gomez">
+        <sold-product>
+            <product>
+                <name>ISOPROPYL ALCOHOL</name>
+                <price>339.48</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Martinez</buyer-last-name>
+            </product>
+            <product>
+                <name>pain relief</name>
+                <price>938.23</price>
+                <buyer-first-name>Fred</buyer-first-name>
+                <buyer-last-name>Allen</buyer-last-name>
+            </product>
+            <product>
+                <name>Fluoxetine</name>
+                <price>385.37</price>
+                <buyer-first-name>Chris</buyer-first-name>
+                <buyer-last-name>Mitchell</buyer-last-name>
+            </product>
+            <product>
+                <name>Archangelica Eucalyptus</name>
+                <price>1334.91</price>
+                <buyer-first-name>Betty</buyer-first-name>
+                <buyer-last-name>Lawson</buyer-last-name>
+            </product>
+            <product>
+                <name>VITALUMIERE AQUA</name>
+                <price>1293.09</price>
+                <buyer-first-name>Chris</buyer-first-name>
+                <buyer-last-name>Mitchell</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Kathy" last-name="Gilbert">
+        <sold-product>
+            <product>
+                <name>Megestrol Acetate</name>
+                <price>976.15</price>
+                <buyer-first-name>Billy</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>Irbesartan and Hydrochlorothiazide</name>
+                <price>308.30</price>
+                <buyer-first-name>Carl</buyer-first-name>
+                <buyer-last-name>Daniels</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Betty" last-name="Ward">
+        <sold-product>
+            <product>
+                <name>TRAMADOL HYDROCHLORIDE</name>
+                <price>516.48</price>
+                <buyer-first-name>Jacqueline</buyer-first-name>
+                <buyer-last-name>Perez</buyer-last-name>
+            </product>
+            <product>
+                <name>Buprenorphine hydrochloride</name>
+                <price>391.05</price>
+                <buyer-first-name>Clarence</buyer-first-name>
+                <buyer-last-name>Fowler</buyer-last-name>
+            </product>
+            <product>
+                <name>MEDICATED DANDRUFF</name>
+                <price>1351.02</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Martinez</buyer-last-name>
+            </product>
+            <product>
+                <name>Buprenorphine hydrochloride and naloxone hydrochloride dihydrate</name>
+                <price>293.33</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Martinez</buyer-last-name>
+            </product>
+            <product>
+                <name>Labetalol hydrochloride</name>
+                <price>436.38</price>
+                <buyer-first-name>Brandon</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Patricia" last-name="Fuller">
+        <sold-product>
+            <product>
+                <name>Care One Hemorrhoidal</name>
+                <price>932.18</price>
+                <buyer-first-name>Diana</buyer-first-name>
+                <buyer-last-name>Harvey</buyer-last-name>
+            </product>
+            <product>
+                <name>CARBIDOPA AND LEVODOPA</name>
+                <price>441.64</price>
+                <buyer-first-name>Jacqueline</buyer-first-name>
+                <buyer-last-name>Perez</buyer-last-name>
+            </product>
+            <product>
+                <name>Lorazepam</name>
+                <price>1134.96</price>
+                <buyer-first-name>Eugene</buyer-first-name>
+                <buyer-last-name>Stewart</buyer-last-name>
+            </product>
+            <product>
+                <name>Meloxicam</name>
+                <price>809.18</price>
+                <buyer-first-name>Christina</buyer-first-name>
+                <buyer-last-name>Patterson</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Chris" last-name="Mitchell">
+        <sold-product>
+            <product>
+                <name>Allopurinol</name>
+                <price>518.50</price>
+                <buyer-first-name>Brandon</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+            <product>
+                <name>Glyburide</name>
+                <price>95.10</price>
+                <buyer-first-name>Nicole</buyer-first-name>
+                <buyer-last-name>Martinez</buyer-last-name>
+            </product>
+            <product>
+                <name>Ondansetron</name>
+                <price>1249.76</price>
+                <buyer-first-name>Brenda</buyer-first-name>
+                <buyer-last-name>Howell</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Arthur" last-name="Reynolds">
+        <sold-product>
+            <product>
+                <name>Stila Hydrating Primer Oil-Free SPF 30</name>
+                <price>179.28</price>
+                <buyer-first-name>Christine</buyer-first-name>
+                <buyer-last-name>Gomez</buyer-last-name>
+            </product>
+            <product>
+                <name>Lamotrigine Extended Release</name>
+                <price>245.63</price>
+                <buyer-first-name>Eugene</buyer-first-name>
+                <buyer-last-name>Stewart</buyer-last-name>
+            </product>
+            <product>
+                <name>IOPE SUPER VITAL</name>
+                <price>824.68</price>
+                <buyer-first-name>Bonnie</buyer-first-name>
+                <buyer-last-name>Fox</buyer-last-name>
+            </product>
+            <product>
+                <name>ziprasidone hydrochloride</name>
+                <price>628.66</price>
+                <buyer-first-name>Billy</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Wanda" last-name="Harris">
+        <sold-product>
+            <product>
+                <name>AMARANTHUS PALMERI POLLEN</name>
+                <price>623.16</price>
+                <buyer-first-name>Diana</buyer-first-name>
+                <buyer-last-name>Harvey</buyer-last-name>
+            </product>
+            <product>
+                <name>Goats Milk</name>
+                <price>298.53</price>
+                <buyer-first-name>Patricia</buyer-first-name>
+                <buyer-last-name>Fuller</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+    <user first-name="Doris" last-name="Cook">
+        <sold-product>
+            <product>
+                <name>DAYWEAR PLUS MULTI PROTECTION TINTED MOISTURIZER</name>
+                <price>555.12</price>
+                <buyer-first-name>Eugene</buyer-first-name>
+                <buyer-last-name>Stewart</buyer-last-name>
+            </product>
+            <product>
+                <name>Agaricus Equisetum Special Order</name>
+                <price>585.93</price>
+                <buyer-first-name>Betty</buyer-first-name>
+                <buyer-last-name>Ward</buyer-last-name>
+            </product>
+            <product>
+                <name>Glipizide</name>
+                <price>621.78</price>
+                <buyer-first-name>Emily</buyer-first-name>
+                <buyer-last-name>Parker</buyer-last-name>
+            </product>
+            <product>
+                <name>Finasteride</name>
+                <price>1374.01</price>
+                <buyer-first-name>Benjamin</buyer-first-name>
+                <buyer-last-name>Henry</buyer-last-name>
+            </product>
+            <product>
+                <name>Pollens - Weeds and Garden Plants, Scotch Broom Cytisus scoparius</name>
+                <price>135.82</price>
+                <buyer-first-name>Anna</buyer-first-name>
+                <buyer-last-name>Clark</buyer-last-name>
+            </product>
+            <product>
+                <name>Warfarin Sodium</name>
+                <price>138.83</price>
+                <buyer-first-name>Paula</buyer-first-name>
+                <buyer-last-name>Hill</buyer-last-name>
+            </product>
+            <product>
+                <name>PredniSONE</name>
+                <price>286.43</price>
+                <buyer-first-name>Diana</buyer-first-name>
+                <buyer-last-name>Harvey</buyer-last-name>
+            </product>
+        </sold-product>
+    </user>
+</users>

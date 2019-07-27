@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<products>
+    <product name="equaline" price="520.45" seller="Peterson"/>
+    <product name="Prednisone" price="550.72" seller="Mitchell"/>
+    <product name="Echinacea Quartz Gum Support" price="570.08" seller="Emily Parker"/>
+    <product name="No7 Protect and Perfect Foundation Sunscreen Broad Spectrum SPF 15 Cool Ivory" price="616.19" seller="Anna Parker"/>
+    <product name="Foaming Hand Sanitizer" price="624.72" seller="Carl Daniels"/>
+    <product name="Strattera" price="658.54" seller="Gloria Alexander"/>
+    <product name="Ampicillin" price="674.63" seller="Thomas Snyder"/>
+    <product name="CLARINS Ever Matte SPF 15 - 105 Nude" price="696.06" seller="Mitchell"/>
+    <product name="CALMING DIAPER RASH" price="700.92" seller="Clarence Fowler"/>
+    <product name="Acnezzol Base" price="710.60" seller="Carl Daniels"/>
+    <product name="Naproxen" price="807.22" seller="Jeremy Woods"/>
+    <product name="Aquafresh" price="849.93" seller="Carl Daniels"/>
+    <product name="Moore Medical Sinus Pain and Pressure Relief" price="855.39" seller="Anna Parker"/>
+    <product name="Shopko Lip Treatment" price="861.42" seller="Jeremy Woods"/>
+    <product name="ESIKA" price="879.37" seller="Jacqueline Perez"/>
+    <product name="Myristica Argentum Sinus Relief" price="904.52" seller="Thompson"/>
+    <product name="Aspirin" price="925.45" seller="Clarence Fowler"/>
+    <product name="Spironolactone" price="933.69" seller="Carl Daniels"/>
+    <product name="Clearskin" price="968.59" seller="Carl Daniels"/>
+    <product name="TYLENOL COLD MULTI-SYMPTOM DAYTIME" price="1010.81" seller="Brandon Fuller"/>
+    <product name="Butalbital, Aspirin and Caffeine" price="1010.98" seller="Carl Daniels"/>
+    <product name="SEPHORA Acne-Fighting Mattifying Moisturizer" price="1019.28" seller="Bonnie Fox"/>
+    <product name="CVS Therapeutic Menthol Pain Reliever" price="1033.42" seller="Emily Parker"/>
+    <product name="Aspen" price="1046.46" seller="Emily Parker"/>
+    <product name="Acetic Acid" price="1060.43" seller="Jeremy Woods"/>
+    <product name="up and up temporary minor arthritis pain relief" price="1085.78" seller="Mitchell"/>
+    <product name="Ibuprofen" price="1088.04" seller="Clarence Fowler"/>
+    <product name="XANTHIUM STRUMARIUM VAR CANADENSE POLLEN" price="1091.38" seller="Jacqueline Perez"/>
+    <product name="smart sense nighttime cold and flu relief" price="1101.77" seller="Thompson"/>
+    <product name="Laser Block 100" price="1135.43" seller="Bonnie Fox"/>
+    <product name="DIPYRIDAMOLE" price="1150.67" seller="Benjamin Henry"/>
+    <product name="Pollens - Trees, Birch Mix" price="1153.54" seller="Brandon Fuller"/>
+    <product name="Americaine" price="1165.75" seller="Emily Parker"/>
+    <product name="Nighttime Sleep Aid" price="1217.11" seller="Emily Parker"/>
+    <product name="DIVALPROEX SODIUM" price="1287.03" seller="Thomas Snyder"/>
+    <product name="Leg Cramp Relief" price="1345.69" seller="Clarence Fowler"/>
+    <product name="Fair Foundation SPF 15" price="1394.24" seller="Carl Daniels"/>
+    <product name="Etodolac" price="1443.13" seller="Carl Daniels"/>
+    <product name="Acid Reducer" price="1443.51" seller="Brandon Fuller"/>
+    <product name="GEMCITABINE" price="1468.11" seller="Brandon Fuller"/>
+    <product name="Glycopyrrolate" price="1471.43" seller="Peterson"/>
+    <product name="Etoposide" price="1483.96" seller="Benjamin Henry"/>
+    <product name="Budpak Hemorrhoid Anesthetic" price="1499.29" seller="Brandon Fuller"/>
+</products>
