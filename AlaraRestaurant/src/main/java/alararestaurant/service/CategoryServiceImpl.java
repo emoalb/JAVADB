@@ -13,26 +13,25 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
-private final CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
-@Autowired
+    @Autowired
     public CategoryServiceImpl(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
 
     @Override
     public String exportCategoriesByCountOfItems() {
-        List<Category> categories = this.categoryRepository.findAll();
-    /*    categories.sort(new Comparator<Category>() {
-            @Override
-            public int compare(Category o1, Category o2) {
-                int val = Integer.compare(o1.getItems().size(),o2.getItems().size());
-               // o1.getItems().forEach(item -> sum1.incrementAndGet(item.getPrice()));
-                if(val==1) return
-                return val;
-            }
-        });*/
+        StringBuilder sb = new StringBuilder();
+        List<Category> categories = this.categoryRepository.findAllOrderByItemsCountAndPrice();
+        categories.forEach(category -> {
+            sb.append("Category: ").append(category.getName()).append(System.lineSeparator());
+            category.getItems().forEach(item -> {
+                sb.append("--Item Name: ").append(item.getName()).append(System.lineSeparator());
+                sb.append("--Item Price").append(item.getPrice()).append(System.lineSeparator());
+            });
+        });
 
-        return "kura mi qnko";
+        return sb.toString();
     }
 }

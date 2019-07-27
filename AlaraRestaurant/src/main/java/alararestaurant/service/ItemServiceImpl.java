@@ -1,7 +1,6 @@
 package alararestaurant.service;
 
 import alararestaurant.domain.dtos.ItemFromJSONDto;
-import alararestaurant.domain.dtos.ItemSeedDto;
 import alararestaurant.domain.entities.Category;
 import alararestaurant.domain.entities.Item;
 import alararestaurant.repository.CategoryRepository;
@@ -70,11 +69,8 @@ public class ItemServiceImpl implements ItemService {
                   category.setName(categoryName);
                   this.categoryRepository.saveAndFlush(category);
               }
-              ItemSeedDto itemSeedDto = new ItemSeedDto();
-              itemSeedDto.setName(itemFromJSONDto.getName());
-              itemSeedDto.setPrice(itemFromJSONDto.getPrice());
-              itemSeedDto.setCategory(category);
-              Item item  = this.modelMapper.map(itemSeedDto,Item.class);
+              Item item  = this.modelMapper.map(itemFromJSONDto,Item.class);
+              item.setCategory(category);
               if(this.itemRepository.getItemByName(item.getName()).orElse(null)==null) {
                   this.itemRepository.saveAndFlush(item);
                   sb.append("Record ").append(item.getName()).append(" successfully imported.").append(System.lineSeparator());

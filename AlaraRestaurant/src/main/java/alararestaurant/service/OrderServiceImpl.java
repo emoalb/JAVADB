@@ -1,18 +1,11 @@
 package alararestaurant.service;
 
 import alararestaurant.domain.dtos.*;
-import alararestaurant.domain.entities.Employee;
-import alararestaurant.domain.entities.Item;
-import alararestaurant.domain.entities.Order;
-import alararestaurant.domain.entities.OrderItem;
-import alararestaurant.repository.EmployeeRepository;
-import alararestaurant.repository.ItemRepository;
-import alararestaurant.repository.OrderItemRepository;
-import alararestaurant.repository.OrderRepository;
+import alararestaurant.domain.entities.*;
+import alararestaurant.repository.*;
 import alararestaurant.util.FileUtil;
 import alararestaurant.util.ValidationUtil;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.PropertyMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +19,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
 @Transactional
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -38,9 +32,10 @@ public class OrderServiceImpl implements OrderService {
     private final ValidationUtil validationUtil;
     private final EmployeeRepository employeeRepository;
     private final ItemRepository itemRepository;
+    private final PositionRepository positionRepository;
 
     @Autowired
-    public OrderServiceImpl(OrderRepository orderRepository, ModelMapper modelMapper, OrderItemRepository orderItemRepository, FileUtil fileUtil, ValidationUtil validationUtil, EmployeeRepository employeeRepository, ItemRepository itemRepository) {
+    public OrderServiceImpl(OrderRepository orderRepository, ModelMapper modelMapper, OrderItemRepository orderItemRepository, FileUtil fileUtil, ValidationUtil validationUtil, EmployeeRepository employeeRepository, ItemRepository itemRepository, PositionRepository positionRepository) {
         this.orderRepository = orderRepository;
         this.modelMapper = modelMapper;
         this.orderItemRepository = orderItemRepository;
@@ -48,6 +43,7 @@ public class OrderServiceImpl implements OrderService {
         this.validationUtil = validationUtil;
         this.employeeRepository = employeeRepository;
         this.itemRepository = itemRepository;
+        this.positionRepository = positionRepository;
     }
 
     @Override
@@ -69,19 +65,11 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public String importOrders() throws JAXBException {
         StringBuilder sb = new StringBuilder();
- try {
+        try {
             JAXBContext jaxbContext = JAXBContext.newInstance(OrdersXmlDto.class);
             File file = new File(ROOT + ORDERS_IMPORT_PATH);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             OrdersXmlDto ordersXmlDto = (OrdersXmlDto) unmarshaller.unmarshal(file);
-         /*   PropertyMap<OrderXmlDto, Order> orderXmlDtoOrderPropertyMap = new PropertyMap<OrderXmlDto, Order>() {
-                @Override
-                protected void configure() {
-                    map().setCustomer(source.getCustomerName());
-                //    map().setDateTime(LocalDateTime.parse(source.getDateTime(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
-                    map().setType(source.getOrderType());
-                }
-            };*/
 
             for (OrderXmlDto orderXmlDto : ordersXmlDto.getOrderXmlDtos()) {
                 if (!validationUtil.isValid(orderXmlDto)) {
@@ -96,10 +84,10 @@ public class OrderServiceImpl implements OrderService {
                 List<ItemXmlDto> itemXmlDtos = orderXmlDto.getItemXmlDto().getItemXmlDtos();
                 boolean hasNull = false;
                 //
-            //    this.modelMapper.addMappings(orderXmlDtoOrderPropertyMap);
-                Order currentOrder =new Order();//this.modelMapper.map(orderXmlDto,Order.class);//
-              currentOrder.setType(orderXmlDto.getOrderType());
-               currentOrder.setCustomer(orderXmlDto.getCustomerName());
+                //    this.modelMapper.addMappings(orderXmlDtoOrderPropertyMap);
+                Order currentOrder = new Order();//this.modelMapper.map(orderXmlDto,Order.class);//
+                currentOrder.setType(orderXmlDto.getOrderType());
+                currentOrder.setCustomer(orderXmlDto.getCustomerName());
                 currentOrder.setDateTime(LocalDateTime.parse(orderXmlDto.getDateTime(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
                 currentOrder.setEmployee(currentEmployee);
                 List<OrderItem> orderItemList = new ArrayList<>();
@@ -123,16 +111,18 @@ public class OrderServiceImpl implements OrderService {
             }
 
 
-      } catch (Exception e) {
-          System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
 
-       }
+        }
         return sb.toString();
     }
 
     @Override
     public String exportOrdersFinishedByTheBurgerFlippers() {
-        // TODO : Implement me
+        Position position = this.positionRepository.findPositionByName("Burger Flipper").orElse(null);
+        List<Order> orders = this.orderRepository.findAllByEmployee_PositionOrderByEmployeeId(position);
+        List<Order> otherOrders = this.orderRepository.findAllByEmployee_Position_NameOrderByEmployee_Name(position.getName());
         return null;
     }
 }

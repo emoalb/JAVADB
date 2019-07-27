@@ -1,7 +1,6 @@
 package alararestaurant.service;
 
 import alararestaurant.domain.dtos.EmployeeFromJSONDto;
-import alararestaurant.domain.dtos.EmployeeSeedDto;
 import alararestaurant.domain.entities.Employee;
 import alararestaurant.domain.entities.Position;
 import alararestaurant.repository.EmployeeRepository;
@@ -10,6 +9,7 @@ import alararestaurant.util.FileUtil;
 import alararestaurant.util.ValidationUtil;
 import com.google.gson.Gson;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.PropertyMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -72,11 +72,8 @@ public class EmployeeServiceImpl implements EmployeeService {
                     position.setName(positionName);
                     this.positionRepository.saveAndFlush(position);
                 }
-                EmployeeSeedDto employeeSeedDto = new EmployeeSeedDto();
-                employeeSeedDto.setName(employeeFromJSONDto.getName());
-                employeeSeedDto.setAge(employeeFromJSONDto.getAge());
-                employeeSeedDto.setPosition(position);
-                Employee employee = this.modelMapper.map(employeeSeedDto, Employee.class);
+                Employee employee = this.modelMapper.map(employeeFromJSONDto, Employee.class);
+                employee.setPosition(position);
                 this.employeeRepository.saveAndFlush(employee);
                 sb.append("Record ").append(employee.getName()).append(" successfully imported.").append(System.lineSeparator());
             }
