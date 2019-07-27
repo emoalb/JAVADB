@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.List;
 
 @Service
 public class RacerServiceImpl implements RacerService {
@@ -38,7 +39,7 @@ public class RacerServiceImpl implements RacerService {
     @Override
     public Boolean racersAreImported() {
         //TODO: Implement me
-        return this.racerRepository.count()>0;
+        return this.racerRepository.count() > 0;
     }
 
     @Override
@@ -55,19 +56,19 @@ public class RacerServiceImpl implements RacerService {
     public String importRacers(String racersFileContent) {
         StringBuilder sb = new StringBuilder();
         try {
-            RacerImportDto[] racerImportDtos = this.gson.fromJson(racersFileContent,RacerImportDto[].class);
-            for(RacerImportDto racerImportDto : racerImportDtos) {
+            RacerImportDto[] racerImportDtos = this.gson.fromJson(racersFileContent, RacerImportDto[].class);
+            for (RacerImportDto racerImportDto : racerImportDtos) {
                 Town homeTown = this.townRepository.findByName(racerImportDto.getHomeTown()).orElse(null);
-                if (!this.validationUtil.isValid(racerImportDtos)||(homeTown==null&&racerImportDto.getHomeTown()!=null)) {
+                if (!this.validationUtil.isValid(racerImportDtos) || (homeTown == null && racerImportDto.getHomeTown() != null)) {
                     sb.append(Constants.INCORRECT_DATA_MESSAGE).append(System.lineSeparator());
                     continue;
                 }
-                Racer racer = this.modelMapper.map(racerImportDto,Racer.class);
+                Racer racer = this.modelMapper.map(racerImportDto, Racer.class);
                 racer.setHomeTown(homeTown);
-                if(this.racerRepository.findByName(racer.getName()).orElse(null)==null){
+                if (this.racerRepository.findByName(racer.getName()).orElse(null) == null) {
                     this.racerRepository.saveAndFlush(racer);
-                    sb.append(String.format(Constants.SUCCESSFUL_IMPORT_MESSAGE,racer.getClass().getSimpleName(),racer.getName())).append(System.lineSeparator());
-                }else{
+                    sb.append(String.format(Constants.SUCCESSFUL_IMPORT_MESSAGE, racer.getClass().getSimpleName(), racer.getName())).append(System.lineSeparator());
+                } else {
                     sb.append(Constants.DUPLICATE_DATA_MESSAGE).append(System.lineSeparator());
                 }
             }
@@ -79,7 +80,18 @@ public class RacerServiceImpl implements RacerService {
 
     @Override
     public String exportRacingCars() {
-        //TODO: Implement me
-        return null;
+        StringBuilder sb = new StringBuilder();
+        List<Racer> racersWithCars = this.racerRepository.findRacersWithCars();
+        racersWithCars.forEach(racer -> {
+            sb.append("Name: ").append(racer.getName()).append(System.lineSeparator());
+            if (racer.getAge() != null) {
+                sb.append("Age: ").append(racer.getAge()).append(System.lineSeparator());
+            }
+            sb.append("Cars: ").append(System.lineSeparator());
+            racer.getCars().forEach(car -> {
+                sb.append(String.format("%s %s %d", car.getBrand(), car.getModel(), car.getYearOfProduction())).append(System.lineSeparator());
+            });
+        });
+        return sb.toString();
     }
 }
